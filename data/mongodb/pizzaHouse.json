@@ -1,0 +1,214 @@
+[
+    {
+        "_id": 1,
+        "_t": "Pizza",
+        "name": "Pizza Margherita",
+        "ingredients": [
+            "sos pomidorowy",
+            "ser",
+            "oregano"
+        ],
+        "photo": "https://fotokulinarnie.pl/wp-content/uploads/2014/05/IMG_4569-792x528.jpg",
+        "price": {
+            "small": 12.90,
+            "big": 15.90,
+            "family": 22.90
+        }
+    },
+    {
+        "_id": 2,
+        "_t": "Pizza",
+        "name": "Pizza Salame",
+        "ingredients": [
+            "sos pomidorowy",
+            "ser",
+            "salami",
+            "cebula",
+            "oliwki",
+            "oregano"
+        ],
+        "photo": "https://fotokulinarnie.pl/wp-content/uploads/2014/03/IMG_4358-792x528.jpg",
+        "price": {
+            "small": 12.90,
+            "big": 16.90,
+            "family": 23.90
+        }
+    },
+    {
+        "_id": 3,
+        "_t": "Pizza",
+        "name": "Pizza Prosciutto",
+        "ingredients": [
+            "sos pomidorowy",
+            "ser",
+            "szynka",
+            "pomidory",
+            "oliwki"
+        ],
+        "photo": "https://fotokulinarnie.pl/wp-content/uploads/2014/05/IMG_4331-792x1188.jpg",
+        "price": {
+            "small": 13.90,
+            "big": 17.90,
+            "family": 24.90
+        }
+    },
+    {
+        "_id": 4,
+        "_t": "Pizza",
+        "name": "Pizza Carbonara",
+        "ingredients": [
+            "sos pomidorowy",
+            "ser",
+            "boczek",
+            "pecorino",
+            "jajko"
+        ],
+        "photo": "https://fotokulinarnie.pl/wp-content/uploads/2015/02/IMG_0565-792x528.jpg",
+        "price": {
+            "small": 14.00,
+            "big": 18.00,
+            "family": 25.00
+        }
+    },
+    {
+        "_id": 5,
+        "_t": "Pizza",
+        "name": "Pizza Pepperoni",
+        "ingredients": [
+            "sos pomidorowy",
+            "ser",
+            "chilli",
+            "salami",
+            "papryka peperoni",
+            "oliwki",
+            "cebula"
+        ],
+        "photo": "https://www.zajadam.pl/wp-content/uploads/2015/02/pizza-pepperoni-11-891x500.jpg",
+        "price": {
+            "small": 14.00,
+            "big": 19.50,
+            "family": 25.90
+        }
+    },
+    {
+        "_id": 6,
+        "_t": "Pizza",
+        "name": "Pizza Pepperoni",
+        "ingredients": [
+            "sos pomidorowy",
+            "ser",
+            "oregano",
+            "szynka",
+            "pieczarki"
+        ],
+        "photo": "https://www.przyslijprzepis.pl/media/cache/default_view/uploads/media/recipe/0005/93/4c7a0b58db905fccf6d6a352543a11f0fb1517f3.jpeg",
+        "price": {
+            "small": 12.00,
+            "big": 17.50,
+            "family": 22.90
+        }
+    },
+    {
+        "_id": 7,
+        "_t": "Pizza",
+        "name": "Pizza Hawajska",
+        "ingredients": [
+            "sos pomidorowy",
+            "ser",
+            "oregano",
+            "szynka",
+            "ananas"
+        ],
+        "photo": "https://s3.przepisy.pl/przepisy3ii/img/variants/670x0/pizza-hawajska.jpg",
+        "price": {
+            "small": 14.30,
+            "big": 18.50,
+            "family": 24.00
+        }
+    },
+    {
+        "_id": 8,
+        "_t": "Pizza",
+        "name": "Pizza Wegetariańska",
+        "ingredients": [
+            "sos pomidorowy",
+            "ser",
+            "czosnek",
+            "cebula",
+            "pieczarki",
+            "kukurydza",
+            "brokuły",
+            "pomidory"
+        ],
+        "photo": "https://pliki.doradcasmaku.pl/big-3-3af1-4a70-815c-812e-178a-8f2d-ca47-0b5d",
+        "price": {
+            "small": 16.30,
+            "big": 20.50,
+            "family": 27.00
+        }
+    },
+    {
+        "_id": 9,
+        "_t": "Pasta",
+        "name": "Lasagne",
+        "description": "Rodzaj makaronu w postaci dużych, prostokątnych płatów, a także danie przygotowywane na bazie tego makaronu. Makaron jest uprzednio gotowany lub układany na sucho (gotowy, dostępny w sprzedaży) w prostokątnym naczyniu, na przemian z warstwami farszu. Następnie potrawa jest zapiekana. Farsz stanowią najczęściej warstwy sosu pomidorowego z mięsem, beszamelu i sera, układane do wyczerpania składników, chociaż zdarzają się przepisy na wersje wegetariańskie i na słodko. Danie podawane jest na gorąco. Potrawa ta pochodzi z Włoch.",
+        "photo": "https://pliki.doradcasmaku.pl/big-3-3af1-4a70-815c-812e-178a-8f2d-ca47-0b5d",
+        "price": 19.50
+    },
+    {
+        "_id": 10,
+        "_t": "Pasta",
+        "name": "Tagliatelle bolognese",
+        "description": "Klasyczny włoski makaron z rejonu Emilia-Romagna w kształcie długich, płaskich wstążek o grubości ok. 2 mm i szerokości 0,65-1 cm. Kształtem przypomina fettuccine, lecz jest od niego szerszy. Sos bolognese pochodzący z włoskiego miasta Bolonia. Jego historia sięga czasów średniowiecza. Sporządza się go z wielu rodzajów mięs (tradycyjnie krojonych na bardzo drobne kawałeczki, obecnie się je mieli, używa się wieprzowiny i wołowiny), kiełbas (tradycyjnie: mortadela), boczku, zestawu warzyw (z typowej tzw. włoszczyzny, czyli marchewki, selera i pietruszki), oliwy, pomidorów i czerwonego wina. Sekretem udanego sosu jest długie gotowanie: co najmniej przez dwie godziny, a najlepiej przez cztery. Należy pamiętać, że jest to sos mięsny, do którego Włosi jedynie dorzucali warzywa, które mieli pod ręką, nie może więc być w nim za dużo pomidorów.",
+        "photo": "https://s3.przepisy.pl/przepisy3ii/img/variants/670x0/tagliatelle-bolognese-with-mozzarella_a65796.jpg",
+        "price": 18.00
+    },
+    {
+        "_id": 11,
+        "_t": "Pasta",
+        "name": "Spaghetti bolognese",
+        "description": "Spaghetti – rodzaj długiego, cienkiego makaronu, podstawa dań tradycyjnej kuchni włoskiej. W języku polskim słowo to bywa również używane w odniesieniu do potraw z tego makaronu. Sos bolognese pochodzący z włoskiego miasta Bolonia. Jego historia sięga czasów średniowiecza. Sporządza się go z wielu rodzajów mięs (tradycyjnie krojonych na bardzo drobne kawałeczki, obecnie się je mieli, używa się wieprzowiny i wołowiny), kiełbas (tradycyjnie: mortadela), boczku, zestawu warzyw (z typowej tzw. włoszczyzny, czyli marchewki, selera i pietruszki), oliwy, pomidorów i czerwonego wina. Sekretem udanego sosu jest długie gotowanie: co najmniej przez dwie godziny, a najlepiej przez cztery. Należy pamiętać, że jest to sos mięsny, do którego Włosi jedynie dorzucali warzywa, które mieli pod ręką, nie może więc być w nim za dużo pomidorów.",
+        "photo": "https://s3.przepisy.pl/przepisy3ii/img/variants/670x0/sos-bolonski-do-spaghetti.jpg",
+        "price": 17.80
+    },
+    {
+        "_id": 12,
+        "_t": "Drink",
+        "name": "Pepsi",
+        "size": 0.3,
+        "kind": [
+            "Pepsi",
+            "Pepsi Max",
+            "Pepsi Lime",
+            "Pepsi Lime",
+            "Pepsi Wild Cherry",
+            "Pepsi Ginger"
+        ],
+        "price": 4.0
+    },
+    {
+        "_id": 13,
+        "_t": "Drink",
+        "name": "Lipton Ice Tea",
+        "size": 0.5,
+        "kind": [
+            "Lemon Tea",
+            "Peach Tea",
+            "Green Tea",
+            "Green Tea Mango",
+            "Red Tea"
+        ],
+        "price": 4.5
+    },
+    {
+        "_id": 14,
+        "_t": "Drink",
+        "name": "Woda mineralna",
+        "size": 0.5,
+        "kind": [
+            "gazowana",
+            "niegazowana"
+        ],
+        "price": 3.5
+    }
+]

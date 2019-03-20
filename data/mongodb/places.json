@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Centrum Sztuki Współczesnej Zamek Ujazdowski",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                21.03075,
+                52.21943
+            ]
+        }
+    },
+    {
+        "name": "Stadion Miejski Legii Warszawa im. Marszałka J. Piłsudskiego",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                21.04062,
+                52.22046
+            ]
+        }
+    },
+    {
+        "name": "Muzeum Łazienki Królewskie",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                21.03747,
+                52.21561
+            ]
+        }
+    },
+    {
+        "name": "Mauzoleum Walki i Męczeństwa",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                21.02316, 
+                52.21781
+            ]
+        }
+    },
+    {
+        "name": "Pomnik Fryderyka Chopina",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                21.02811,
+                52.21469
+            ]
+        }
+    },
+    {
+        "name": "Pałac Belwederski",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                21.02764, 
+                52.21314
+            ]
+        }
+    },
+    {
+        "name": "Ambasada Federacji Rosyjskiej",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                21.02656,
+                52.21054
+            ]
+        }
+    },
+    {
+        "name": "Kopiec Powstania Warszawskiego",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                21.05609,
+                52.21106
+            ]
+        }
+    },
+    {
+        "name": "Park Ujazdowski",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                21.02568,
+                52.22204
+            ]
+        }
+    }
+]

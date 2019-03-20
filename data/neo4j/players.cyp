@@ -1,0 +1,12 @@
+Create (adam:Player {name: "Adam", score: 100}),
+(jan:Player {name: "Jan", score: 90}),
+(jola:Player {name: "Jola", score: 105}),
+(marek:Player {name: "Marek", score: 100}),
+(adam)-[:PLAYED {date: datetime("2019-01-06"), won: true}]->(jan),
+(adam)-[:PLAYED {date: datetime("2019-02-12"), won: false}]->(jola),
+(marek)-[:PLAYED {date: datetime("2019-01-28"), won: true}]->(jola),
+(marek)-[:LIKES]->(jola),
+(jan)-[:LIKES]->(adam),
+(jola)-[:LIKES]->(marek),
+(jola)-[:LIKES]->(jan),
+(jola)-[:LIKES]->(jola)
