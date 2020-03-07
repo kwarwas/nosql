@@ -30,47 +30,20 @@ namespace RedisApp
     {
         static async Task Main(string[] args)
         {
-            using (var redis = ConnectionMultiplexer.Connect("localhost"))
-            {
-                var db = redis.GetDatabase();
+            using var redis = ConnectionMultiplexer.Connect("localhost");
+            var db = redis.GetDatabase();
 
-                await SimpleTypes(db);
+            await SimpleTypes(db);
 
-                await ComplexTypes(db);
+            await ComplexTypes(db);
 
-                await KeyMethods(db);
+            await KeyMethods(db);
 
-                await Geo(db);
+            await Geo(db);
 
-                await PubSub(redis);
-            }
+            await PubSub(redis);
         }
-
-        private static async Task KeyMethods(IDatabase db)
-        {
-            Console.WriteLine("-- Key operations --");
-
-            db.KeyDelete("key1");
-
-            await db.StringSetAsync("key1", "Hello NoSQL", TimeSpan.FromSeconds(3));
-
-            Console.WriteLine(await db.KeyExistsAsync("key1"));
-
-            await Task.Delay(TimeSpan.FromSeconds(2));
-
-            Console.WriteLine(await db.KeyIdleTimeAsync("key1"));
-
-            Console.WriteLine(await db.KeyTimeToLiveAsync("key1"));
-
-            Console.WriteLine(await db.KeyPersistAsync("key1"));
-
-            Console.WriteLine((await db.KeyTimeToLiveAsync("key1"))?.ToString() ?? "brak");
-
-            Console.WriteLine(await db.KeyExpireAsync("key1", DateTime.Now.AddSeconds(4)));
-
-            Console.WriteLine(await db.KeyTimeToLiveAsync("key1"));
-        }
-
+        
         private static async Task SimpleTypes(IDatabase db)
         {
             Console.WriteLine("-- Store and get simple values --");
@@ -96,7 +69,7 @@ namespace RedisApp
 
         private static async Task ComplexTypes(IDatabase db)
         {
-            Console.WriteLine("-- Store and get simple complex values --");
+            Console.WriteLine("-- Store and get complex values --");
 
             var data = JsonConvert.SerializeObject(new Product(1, "Banana", DateTime.Now));
 
@@ -106,7 +79,32 @@ namespace RedisApp
 
             Console.WriteLine(" - {0} {1}", nameof(product), product);
         }
+        
+        private static async Task KeyMethods(IDatabase db)
+        {
+            Console.WriteLine("-- Key operations --");
 
+            db.KeyDelete("key1");
+
+            await db.StringSetAsync("key1", "Hello NoSQL", TimeSpan.FromSeconds(3));
+
+            Console.WriteLine(await db.KeyExistsAsync("key1"));
+
+            await Task.Delay(TimeSpan.FromSeconds(2));
+
+            Console.WriteLine(await db.KeyIdleTimeAsync("key1"));
+
+            Console.WriteLine(await db.KeyTimeToLiveAsync("key1"));
+
+            Console.WriteLine(await db.KeyPersistAsync("key1"));
+
+            Console.WriteLine((await db.KeyTimeToLiveAsync("key1"))?.ToString() ?? "brak");
+
+            Console.WriteLine(await db.KeyExpireAsync("key1", DateTime.Now.AddSeconds(4)));
+
+            Console.WriteLine(await db.KeyTimeToLiveAsync("key1"));
+        }
+        
         private static async Task Geo(IDatabase db)
         {
             Console.WriteLine("-- GEO --");
