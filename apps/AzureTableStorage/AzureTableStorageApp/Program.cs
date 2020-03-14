@@ -3,8 +3,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Bogus;
-using Microsoft.WindowsAzure.Storage;
-using Microsoft.WindowsAzure.Storage.Table;
+using Microsoft.Azure.Cosmos.Table;
 
 namespace AzureTableStorageApp
 {
@@ -39,8 +38,7 @@ namespace AzureTableStorageApp
     {
         static async Task Main(string[] args)
         {
-            var storageAccount = CloudStorageAccount.Parse(
-                "DefaultEndpointsProtocol=https;AccountName=athrgsa;AccountKey=1hW8F5xiy/J3Eq4CdVpViLPxQBgVts2DmIUUzDkkRnlJB39DO3QUvWN92GGCI1J7x+2Ovim7gxfImijMsNsQTA==;EndpointSuffix=core.windows.net");
+            var storageAccount = CloudStorageAccount.Parse("from azure portal");
 
             var client = storageAccount.CreateCloudTableClient();
 
