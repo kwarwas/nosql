@@ -30,7 +30,7 @@ namespace RedisApp
     {
         static async Task Main(string[] args)
         {
-            using var redis = ConnectionMultiplexer.Connect("localhost");
+            using var redis = await ConnectionMultiplexer.ConnectAsync("localhost");
             var db = redis.GetDatabase();
 
             await SimpleTypes(db);

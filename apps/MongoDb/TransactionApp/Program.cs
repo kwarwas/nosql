@@ -51,23 +51,22 @@ namespace TransactionApp
                 Console.WriteLine(e);
             }
 
-            using (var session = client.StartSession())
-            {
-                session.StartTransaction();
+            using var session = await client.StartSessionAsync();
+            
+            session.StartTransaction();
 
-                await client
-                    .GetDatabase("Blog")
-                    .GetCollection<Author>("authors")
-                    .DeleteManyAsync(session, x => x.Id == authorId);
+            await client
+                .GetDatabase("Blog")
+                .GetCollection<Author>("authors")
+                .DeleteManyAsync(session, x => x.Id == authorId);
 
-                await client
-                    .GetDatabase("Blog")
-                    .GetCollection<Blog>("blogs")
-                    .DeleteManyAsync(session, x => x.AuthorId == authorId);
+            await client
+                .GetDatabase("Blog")
+                .GetCollection<Blog>("blogs")
+                .DeleteManyAsync(session, x => x.AuthorId == authorId);
 
-//                await session.CommitTransactionAsync();
-                session.AbortTransaction();
-            }
+            // await session.CommitTransactionAsync();
+            await session.AbortTransactionAsync();
         }
     }
 }

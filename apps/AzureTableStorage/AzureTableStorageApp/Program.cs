@@ -216,7 +216,7 @@ namespace AzureTableStorageApp
 
             do
             {
-                var segment = await table.ExecuteQuerySegmentedAsync(query, token);
+                var segment = await table.ExecuteQuerySegmentedAsync(query, token, cancellationToken);
 
                 token = segment.ContinuationToken;
 
