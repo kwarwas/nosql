@@ -36,25 +36,25 @@ namespace RedisApp
             await SimpleTypes(db);
 
             await ComplexTypes(db);
-
+            
             await KeyMethods(db);
-
+            
             await Geo(db);
-
+            
             await PubSub(redis);
         }
         
         private static async Task SimpleTypes(IDatabase db)
         {
             Console.WriteLine("-- Store and get simple values --");
-
+            
             await db.StringSetAsync("key1", "Hello NoSQL");
 
             var key1Value = await db.StringGetAsync("key1");
 
             Console.WriteLine(" - {0} {1}", nameof(key1Value), key1Value);
 
-            await db.StringSetAsync("key2", 2, TimeSpan.FromSeconds(3));
+            await db.StringSetAsync("key2", 2, TimeSpan.FromSeconds(2));
 
             var key2Value = (int) await db.StringGetAsync("key2");
 

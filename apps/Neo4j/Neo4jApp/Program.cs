@@ -26,23 +26,22 @@ namespace Neo4jApp
         static async Task Main(string[] args)
         {
             var uri = "bolt://localhost";
-            var user = "neo4j";
+            var username = "neo4j";
             var password = "password";
 
-            using (var client = new BoltGraphClient(uri, user, password))
-            {
-                await client.ConnectAsync();
+            using var client = new BoltGraphClient(uri, username, password);
+            
+            await client.ConnectAsync();
 
-                await Query1(client);
+            await Query1(client);
 
-                await Query2(client);
-
-                await Create1(client);
-
-                await Set1(client);
-
-                await Delete1(client);
-            }
+            await Query2(client);
+            
+            await Create1(client);
+            
+            await Set1(client);
+            
+            await Delete1(client);
         }
 
         private static async Task Query1(ICypherGraphClient client)
@@ -92,7 +91,7 @@ namespace Neo4jApp
             var query = client.Cypher
                 .Match("(x:Player)")
                 .Where<Player>(x => x.Name == "Jan")
-                .Create("(x)<-[:PLAYED {relData}]-(y:Player {playerData})")
+                .Create("(x)<-[:PLAYED $relData]-(y:Player $playerData)")
                 .WithParam("playerData", new 
                 {
                     name = "Karol", score = 120
