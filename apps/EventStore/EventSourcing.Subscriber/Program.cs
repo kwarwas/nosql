@@ -18,11 +18,11 @@ namespace EventSourcing.Subscriber
             await conn.ConnectAsync();
             
             const string streamName = "e-commerce-stream";
-            const string groupName = "start-from-current";
+            const string groupName = "start-from-beg";
 
             var settings = PersistentSubscriptionSettings.Create()
                 .DoNotResolveLinkTos()
-                .StartFromCurrent();
+                .StartFromBeginning();
             
             try
             {
